@@ -21,5 +21,34 @@ Este proyecto está basado en **NestJS** y utiliza una arquitectura de **microse
 Primero, clona el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
+git clone https://github.com/jhon0210/microServicios.git
 cd tu-repositorio
+
+cd api-gateway
+npm install
+
+cd ../testMicroservicios-tasks
+npm install
+
+cd ../testMicroservicios-users
+npm install
+
+MONGO_URI=mongodb://localhost:27017/tu-base-de-datos
+
+MONGO_URI=mongodb://localhost:27017/nestjs_microservices
+RABBITMQ_URI=amqp://localhost:3000
+JWT_SECRET=mi_clave_secreta
+
+npm run start:dev
+
+.
+├── api-gateway/               # API Gateway para manejar las peticiones
+├── testMicroservicios-tasks/  # Microservicio para manejar las tareas
+├── testMicroservicios-users/  # Microservicio para manejar los usuarios
+├── .gitmodules                # Configuración de submódulos (si aplica)
+├── package.json               # Dependencias generales
+├── README.md                  # Este archivo
+└── .env                       # Variables de entorno
+
+
+
